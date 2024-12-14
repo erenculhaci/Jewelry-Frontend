@@ -1,0 +1,188 @@
+.product-card {
+  width: 100%;
+  background: #fff;
+  transition: box-shadow 0.3s;
+  font-family: 'Avenir', sans-serif;
+  border-radius: 4%;
+  padding: 100px;
+  box-sizing: border-box;
+}
+
+.product-image {
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  position: relative;
+  margin-bottom: 10px; 
+  border-radius: 15%;
+  overflow: hidden;
+}
+
+.product-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.product-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 10px 0;
+
+}
+
+.product-price {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-color-text {
+  font-family: 'Avenir', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.color-options {
+  font-family: 'Avenir', sans-serif;
+  font-weight: 400;
+  display: flex;
+  gap: 8px;
+  margin: 15px 0;
+}
+.color-button {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border: none; 
+  border-radius: 50%; 
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+.color-button::after {
+  content: '';
+  position: absolute;
+  top: -4px; 
+  left: -4px;
+  right: -4px; 
+  bottom: -4px;
+  border: 1px solid transparent; 
+  border-radius: 50%; 
+  transition: border-color 0.3s ease;
+  box-sizing: border-box; 
+}
+
+.color-button.selected::after {
+  border-color: #000; 
+}
+
+.product-rating {
+  font-size: 20px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.filled-star {
+  color: #fadaaa; 
+  -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.051 5.917 1.486 8.224-7.435-4.064-7.435 4.064 1.486-8.224-6.051-5.917 8.332-1.151z"/></svg>') no-repeat;
+  -webkit-mask-size: contain;
+  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.051 5.917 1.486 8.224-7.435-4.064-7.435 4.064 1.486-8.224-6.051-5.917 8.332-1.151z"/></svg>') no-repeat;
+  mask-size: contain;
+  stroke: none !important;
+
+}
+
+.half-star {
+  color: transparent;
+  background: linear-gradient(90deg, #fadaaa 50%, rgb(240, 240, 240) 50%);
+  -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.051 5.917 1.486 8.224-7.435-4.064-7.435 4.064 1.486-8.224-6.051-5.917 8.332-1.151z"/></svg>') no-repeat;
+  -webkit-mask-size: contain;
+  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.051 5.917 1.486 8.224-7.435-4.064-7.435 4.064 1.486-8.224-6.051-5.917 8.332-1.151z"/></svg>') no-repeat;
+  mask-size: contain;
+  stroke: none !important;
+
+}
+
+.empty-star {
+  color: rgb(230, 230, 230); 
+  background: rgb(230, 230, 230); 
+  -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.051 5.917 1.486 8.224-7.435-4.064-7.435 4.064 1.486-8.224-6.051-5.917 8.332-1.151z"/></svg>') no-repeat;
+  -webkit-mask-size: contain;
+  stroke: none !important;
+
+}
+
+.product-rating span {
+  margin-left: 8px;
+  font-size: 15px; 
+  color: #333; 
+}
+
+@media screen and (max-width: 1200px) {
+  .product-card {
+    width: 48%;
+    padding: 20px;
+  }
+  .product-image {
+    padding-top: 100%;
+  }
+  .product-name {
+    font-size: 18px;
+  }
+  .product-price {
+    font-size: 18px;
+  }
+  .color-options {
+    margin: 10px 0;
+  }
+  .color-button {
+    width: 15px;
+    height: 15px;
+  }
+  .product-rating {
+    font-size: 24px;
+  }
+  .product-rating span {
+    font-size: 18px;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  .product-card {
+    padding: 20px;
+  }
+  .product-image {
+    padding-top: 100%;
+  }
+  .product-name {
+    font-size: 14px;
+  }
+  .product-price {
+    font-size: 14px;
+  }
+  .color-options {
+    margin: 10px 0;
+  }
+  .color-button {
+    width: 12px;
+    height: 12px;
+  }
+  .product-rating {
+    font-size: 14px;
+  }
+  .product-rating span {
+    font-size: 14px;
+  }
+  
+}

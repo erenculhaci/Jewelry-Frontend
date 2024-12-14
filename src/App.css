@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url('../public/fonts/Avenir/Avenir-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../public/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../public/fonts/Montserrat/Montserrat-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+.App {
+  font-family: 'Avenir', sans-serif;
+}
+
+h1 {
+  font-family: 'Avenir', sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  margin: 20px;
+  text-align: center;
+}
+
+.color-button.yellow {
+  background-color: #e6ca97;
+}
+
+.color-button.rose {
+  background-color: #e1a4a9;
+}
+
+.color-button.white {
+  background-color: #d9d9d9;
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+} 
