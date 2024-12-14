@@ -90,6 +90,7 @@
   }
 
   .arrow {
+    margin: -30px;
     font-size: 18px;
     padding: 9px;
   }
